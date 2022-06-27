@@ -7,7 +7,6 @@ c)o total dos minutos convertidos em segundos
 */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(){
     int horas, minutos;
