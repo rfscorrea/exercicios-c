@@ -1,36 +1,33 @@
 /*
-24) Faça um programa que leia um vetor com quinze posições para números inteiros. Crie, a seguir, um vetor
-resultante que contenha todos os números primos do vetor digitado. Escreva o vetor resultante.
+23) Faça um programa que leia dois vetores (A e B) com cinco posições para números inteiros. O programa
+deve, então, subtrair o primeiro elemento de A do último de B, acumulando o valor, subtrair o segundo
+elemento de A do penúltimo de B, acumulando o valor e assim por diante. Ao final, mostre o resultado
+de todas as subtrações realizadas.
  */
 
 #include <stdio.h>
 
 int main(){
-    int v[15], vr[15];
-    int i, i2 = 0;
+    int num[15];
+    int i;
 
-    for(i=0; i<15; i++){
+    for(i=0; i<10; i++){
         printf("Valor %i: ", i+1);
-        scanf("%i%*c", &v[i]);
-
-        if(v[i] == 2 || v[i] == 3 || v[i] == 5 || v[i] == 7){
-            vr[i2] = v[i];
-            i2++;
-        }
-        else if(v[i] % 2 != 0 && v[i] % 3  != 0 && v[i] % 5 != 0 && v[i] % 7 != 0){
-            vr[i2] = v[i];
-            i2++;
-        }
+        scanf("%i%*c", &num[i]);
     }
 
     printf("\nVetor: ");
-    for(i=0; i<15; i++){
-        printf("%i ", v[i]);
-    }
+        for(i=0; i<10; i++){
+            printf("%i ", num[i]);
+        }
 
-    printf("\nVetor resultante: ");
-    for(i=0; i<i2; i++){
-        printf("%i ", vr[i]);
+
+    printf("\nTrocando 0 por 1: ");
+    for(i=0; i<10; i++){
+        if(num[i] == 0){
+            num[i] = 1;
+        }
+        printf("%i ", num[i]);
     }
 
     return 0;
